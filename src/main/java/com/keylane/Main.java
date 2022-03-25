@@ -5,6 +5,7 @@ package com.keylane;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SLAReportGenerator gen = new SLAReportGenerator();
+        gen.generate(args[0]);
     }
 }
