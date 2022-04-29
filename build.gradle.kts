@@ -18,8 +18,9 @@ repositories {
 
 dependencies {
 
-    val junitVersion = "5.8.2"
+    implementation("com.googlecode.json-simple:json-simple:1.1.1")
 
+    val junitVersion = "5.8.2"
     // Use JUnit Jupiter API for testing.
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
 
