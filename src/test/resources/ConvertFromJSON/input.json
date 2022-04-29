@@ -1,0 +1,65 @@
+{
+    "events": [
+        {
+            "timestamp": "2022-02-09 04:19:12",
+            "service": "PolicyService",
+            "duration_in_ms": 968
+        },
+        {
+            "timestamp": "2022-02-09 04:19:25",
+            "service": "PolicyService",
+            "duration_in_ms": 654
+        },
+        {
+            "timestamp": "2022-02-09 06:09:55",
+            "service": "FinancialService",
+            "duration_in_ms": 344
+        },
+        {
+            "timestamp": "2022-02-09 06:45:34",
+            "service": "PolicyService",
+            "duration_in_ms": 571
+        },
+        {
+            "timestamp": "2022-02-09 12:57:06",
+            "service": "PolicyService",
+            "duration_in_ms": 691
+        },
+        {
+            "timestamp": "2022-02-09 13:43:53",
+            "service": "FinancialService",
+            "duration_in_ms": 701
+        },
+        {
+            "timestamp": "2022-02-09 14:45:43",
+            "service": "PolicyService",
+            "duration_in_ms": 632
+        },
+        {
+            "timestamp": "2022-02-09 15:43:53",
+            "service": "PolicyService",
+            "duration_in_ms": 240
+        },
+        {
+            "timestamp": "2022-02-09 19:20:39",
+            "service": "PolicyService",
+            "duration_in_ms": 484
+        },
+        {
+            "timestamp": "2022-02-09 22:49:59",
+            "service": "PolicyService",
+            "duration_in_ms": 844
+        },
+        {
+            "timestamp": "2022-02-09 22:49:59",
+            "service": "FinancialService",
+            "duration_in_ms": 353
+        },
+        {
+            "timestamp": "2022-02-09 22:49:59",
+            "service": "PolicyService",
+            "duration_in_ms": 351
+        }
+    ]
+}
+
