@@ -15,25 +15,23 @@ class XMLReaderTest {
     @Test
     void convert() throws ParseException {
         XMLReader reader = new XMLReader();
+        String inputFilePath = Objects.requireNonNull(getClass().getClassLoader().getResource("input.xml")).getPath();
 
-        List<SLARecord> input = new ArrayList<>();
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        List<SLARecord> actual = reader.convert(inputFilePath);
 
-        Date timestamp = format.parse("2022-02-09 04:19:12");
-        input.add(new SLARecord(timestamp, "PolicyService", 968));
+        assertEquals(3, actual.size());
+        assertSLARecordEquals(createTestSLARecord("2022-02-09 04:19:12", "PolicyService", 968), actual.get(0));
+        assertSLARecordEquals(createTestSLARecord("2022-02-09 04:19:25", "PolicyService", 654), actual.get(1));
+        assertSLARecordEquals(createTestSLARecord("2022-02-09 06:09:55", "FinancialService", 344), actual.get(2));
+    }
 
-        timestamp = format.parse("2022-02-09 04:19:25");
-        input.add(new SLARecord(timestamp, "PolicyService", 654));
+    private SLARecord createTestSLARecord(String date, String service, int durationInMS) throws ParseException {
+        return new SLARecord(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(date), service, durationInMS);
+    }
 
-        timestamp = format.parse("2022-02-09 06:09:55");
-        input.add(new SLARecord(timestamp, "FinancialService", 344));
-
-        List<SLARecord> output = reader.convert(Objects.requireNonNull(getClass().getClassLoader().getResource("input.xml")).getPath());
-
-        for (int i=0; i<input.size(); i++){
-            assertEquals(input.get(i).getDurationInMs(), output.get(i).getDurationInMs());
-            assertEquals(input.get(i).getServiceName(), output.get(i).getServiceName());
-            assertEquals(input.get(i).getTimestamp(), output.get(i).getTimestamp());
-        }
+    private void assertSLARecordEquals(SLARecord expected, SLARecord actual) {
+        assertEquals(expected.getServiceName(), actual.getServiceName());
+        assertEquals(expected.getDurationInMs(), actual.getDurationInMs());
+        assertEquals(expected.getTimestamp(), actual.getTimestamp());
     }
 }
