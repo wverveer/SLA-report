@@ -13,7 +13,7 @@ import java.util.Objects;
 class XMLReaderTest {
 
     @Test
-    void convert() throws ParseException {
+    void convert() throws Exception {
         XMLReader reader = new XMLReader();
         String inputFilePath = Objects.requireNonNull(getClass().getClassLoader().getResource("input.xml")).getPath();
 
