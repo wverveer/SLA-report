@@ -43,8 +43,6 @@ public class CSVConverter implements ConvertFromSLARecord {
         List<String> output = new ArrayList<>();
         HashMap<String, ServiceRecord> serviceRecordsHashMap = new HashMap<>();
 
-        output.add("Service;AverageDuration");
-
         for (SLARecord record : input) {
             String serviceName = record.getServiceName();
             int duration = record.getDurationInMs();
