@@ -1,5 +1,6 @@
 package com.keylane;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -58,9 +59,10 @@ public class CSVConverter implements ConvertFromSLARecord {
             }
         }
 
-        for (ServiceRecord record : serviceRecordsHashMap.values()){
-            int average = record.getSum() / record.getCount();
-            output.add(record.getService()+";"+average);
+        for (ServiceRecord record : serviceRecordsHashMap.values()) {
+            double average = (double) record.getSum() / (double) record.getCount();
+            DecimalFormat format = new DecimalFormat("0.#");
+            output.add(record.getService() + ";" + format.format(average));
         }
 
         return output;
