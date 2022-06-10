@@ -3,6 +3,10 @@ package com.keylane;
 import java.io.File;
 import java.util.List;
 
+/*  This class receives a List of Strings and a filename as a destination,
+*   and it creates the corresponding file as output.
+*/
+
 public class FileWriterImpl implements FileWriter {
     @Override
     public void write(List<String> output, String filename) throws Exception {
