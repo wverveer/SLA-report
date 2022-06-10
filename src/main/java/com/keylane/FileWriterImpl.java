@@ -12,7 +12,7 @@ public class FileWriterImpl implements FileWriter {
         java.io.FileWriter myWriter = new java.io.FileWriter(filename);
 
         for (String s : output) {
-            myWriter.write(s);
+            myWriter.write(s+"\n");
         }
         myWriter.close();
     }
