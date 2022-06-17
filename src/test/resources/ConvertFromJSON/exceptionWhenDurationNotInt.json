@@ -1,0 +1,10 @@
+{
+  "events": [
+    {
+      "timestamp": "2022-02-09 14:45:43",
+      "service": "PolicyService",
+      "duration_in_ms": "hello"
+    }
+  ]
+}
+
