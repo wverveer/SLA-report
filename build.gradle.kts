@@ -42,4 +42,7 @@ tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "com.keylane.Main"
     }
+
+    from(configurations.runtimeClasspath.get()
+        .map { if (it.isDirectory) it else zipTree(it) })
 }
