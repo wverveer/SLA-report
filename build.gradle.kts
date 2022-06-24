@@ -24,6 +24,9 @@ dependencies {
     // Use JUnit Jupiter API for testing.
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
 
+    // Mock Service
+    testImplementation("org.mockito:mockito-core:4.6.1")
+
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }

@@ -9,31 +9,31 @@ import java.util.List;
  */
 
 public class UserQuestions {
+    private InputHandler inputHandler;
+
+    public UserQuestions(InputHandler inputHandler) {
+        this.inputHandler = inputHandler;
+    }
+
+    public UserQuestions() {
+        inputHandler = new InputHandlerImpl();
+    }
+
     public List<String> outputQuestions() {
         List<String> answers = new ArrayList<>();
 
         String language = languageChoices();
 
         //Output file type question
-        if (language.equals("English")){
+        if (language.equals("English")) {
             fileTypeQuestionEnglish();
-        }else if (language.equals("Dutch")){
+        } else if (language.equals("Dutch")) {
             fileTypeQuestionDutch();
-        }else{
+        } else {
             fileTypeQuestionGreek();
         }
-        System.out.println("1. CSV");
-        System.out.println("2. HTML");
-        answers.add(stringInputChoices(List.of("CSV", "HTML")));
+        answers.add(stringInput());
 
-        //Output file path
-        if (language.equals("English")){
-            fileTypeQuestionEnglish();
-        }else if (language.equals("Dutch")){
-            fileTypeQuestionDutch();
-        }else{
-            fileTypeQuestionGreek();
-        }
         return answers;
     }
 
@@ -52,7 +52,7 @@ public class UserQuestions {
         System.out.println("Που θα θέλατε να αποθηκεύσετε το αποτέλεσμα;");
     }
 
-    public String languageChoices(){
+    public String languageChoices() {
         System.out.println("What language would you like your questions to be asked:");
         System.out.println("1. English");
         System.out.println("2. Dutch");
@@ -62,15 +62,15 @@ public class UserQuestions {
     }
 
     public String stringInputChoices(List<String> choices) {
-        String input = System.console().readLine();
+        String input = inputHandler.getInput();
 
         String response = "";
-        while (response == null) {
+        while (response.equals("")) {
             try {
                 int in = Integer.parseInt(input);
-                if (in<=choices.size() && in>0){
-                    response=choices.get(in-1);
-                }else {
+                if (in <= choices.size() && in > 0) {
+                    response = choices.get(in - 1);
+                } else {
                     wrongInput();
                 }
             } catch (NumberFormatException nfe) {
@@ -80,7 +80,22 @@ public class UserQuestions {
         return response;
     }
 
-    public void wrongInput(){
+    public String stringInput() {
+        String input = inputHandler.getInput();
+
+        String response = "";
+        while (response.equals("")) {
+            try {
+                response = input;
+            } catch (NumberFormatException nfe) {
+                wrongInput();
+            }
+        }
+
+        return response;
+    }
+
+    public void wrongInput() {
         System.out.println("Wrong input, please try again:");
     }
 }
