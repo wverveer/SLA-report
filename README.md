@@ -1,3 +1,8 @@
+# Running 
+Make sure the jar exist in "SLA-report/build/libs" from there start git bash. 
+USe the following command (Windows): java -cp "./*" com.keylane.Main <inputFilePath> <outputFilePath>.
+Example: java -cp "./*" com.keylane.Main C:/github/SLA-report/src/test/resources/input.xml output.html
+
 # SLA-report
 Application: SLA report
 This application calculates, based on an input, the average duration per service of Axon. This is needed for our SLA report.
