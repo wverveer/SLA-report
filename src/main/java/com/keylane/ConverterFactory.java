@@ -7,7 +7,8 @@ public class ConverterFactory {
 
     private final Map<String, Supplier<ConvertToSLARecord>> readerMap = Map.of(
             "xml", XMLReader::new,
-            "json", JSONReader::new
+            "json", JSONReader::new,
+            "csv", CSVReader::new
     );
     private final Map<String, Supplier<ConvertFromSLARecord>> converterMap = Map.of(
             "csv", CSVConverter::new,
