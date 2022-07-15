@@ -19,3 +19,5 @@ jobs:
             java-version: 11
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Code coverage
+        uses: codecov/codecov-action@v3
