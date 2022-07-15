@@ -17,6 +17,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.apache.commons:commons-csv:1.9.0")
 
     implementation("com.googlecode.json-simple:json-simple:1.1.1")
 

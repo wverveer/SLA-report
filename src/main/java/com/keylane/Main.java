@@ -3,8 +3,10 @@
  */
 package com.keylane;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException {
         SLAReportGenerator generator = new SLAReportGenerator();
         generator.generate(args[0],args[1]);
     }
