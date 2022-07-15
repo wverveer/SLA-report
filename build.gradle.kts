@@ -26,6 +26,8 @@ dependencies {
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
+    testImplementation("org.mockito:mockito-core:4.6.1")
 }
 
 application {
@@ -42,4 +44,7 @@ tasks.withType<Jar> {
     manifest {
         attributes["Main-Class"] = "com.keylane.Main"
     }
+
+    from(configurations.runtimeClasspath.get()
+        .map { if (it.isDirectory) it else zipTree(it) })
 }
