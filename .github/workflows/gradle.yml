@@ -19,3 +19,5 @@ jobs:
             java-version: 11
       - name: Build with Gradle
         run: ./gradlew build
+      - name: PullRequest Test Coverage Report
+        uses: eleboys/test-coverage-report-action@v1.0.2
