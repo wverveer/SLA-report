@@ -13,9 +13,9 @@ public class SLAReportGenerator {
     private final FileWriter fileWriter;
     private final ConverterFactory converterFactory;
 
-    public SLAReportGenerator() {
-        fileWriter = new FileWriterImpl();
-        converterFactory = new ConverterFactory();
+    public static void main(String[] args) throws Exception {
+        SLAReportGenerator generator = new SLAReportGenerator(new FileWriterImpl(), new ConverterFactory());
+        generator.generate(args[0], args[1]);
     }
 
     public SLAReportGenerator(FileWriter fileWriter, ConverterFactory converterFactory) {

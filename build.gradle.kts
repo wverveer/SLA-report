@@ -33,7 +33,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass.set("com.keylane.Main")
+    mainClass.set("com.keylane.SLAReportGenerator")
 }
 
 tasks.test {
@@ -43,7 +43,7 @@ tasks.test {
 
 tasks.withType<Jar> {
     manifest {
-        attributes["Main-Class"] = "com.keylane.Main"
+        attributes["Main-Class"] = "com.keylane.SLAReportGenerator"
     }
 
     from(configurations.runtimeClasspath.get()
