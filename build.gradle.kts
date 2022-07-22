@@ -37,6 +37,11 @@ application {
     mainClass.set("com.keylane.Main")
 }
 
+tasks.jacocoTestReport {
+    reports {
+        csv.isEnabled = true
+    }
+}
 tasks.test {
     // Use junit platform for unit tests.
     useJUnitPlatform()
