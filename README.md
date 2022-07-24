@@ -1,5 +1,7 @@
 [![CI/CD](https://github.com/wverveer/SLA-report/actions/workflows/gradle.yml/badge.svg)](https://github.com/wverveer/SLA-report/actions/workflows/gradle.yml)
 [![Coverage](.github/badges/jacoco.svg)](jacoco.svg)
+[![GitHub Issues Open](https://github-basic-badges.herokuapp.com/issues/wverveer/SLA-report.svg)]()
+
 # Running 
 Make sure the jar exist in "SLA-report/build/libs" from there start git bash. 
 USe the following command (Windows): java -cp "./*" com.keylane.Main <inputFilePath> <outputFilePath>.
