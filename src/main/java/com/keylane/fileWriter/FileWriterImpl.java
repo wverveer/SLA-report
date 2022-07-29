@@ -1,7 +1,6 @@
-package com.keylane;
+package com.keylane.fileWriter;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.PrintWriter;
 import java.util.List;
 

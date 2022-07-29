@@ -2,6 +2,11 @@ package com.keylane;
 
 import java.util.Objects;
 
+import com.keylane.converter.ConvertFromSLARecord;
+import com.keylane.fileWriter.FileWriter;
+import com.keylane.fileWriter.FileWriterImpl;
+import com.keylane.reader.ConvertToSLARecord;
+
 /**
  * Steps of the procedure:
  * 1. collect info for output

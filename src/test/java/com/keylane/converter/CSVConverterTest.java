@@ -1,11 +1,13 @@
-package com.keylane;
-
-import org.junit.jupiter.api.Test;
+package com.keylane.converter;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import com.keylane.model.SLARecord;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

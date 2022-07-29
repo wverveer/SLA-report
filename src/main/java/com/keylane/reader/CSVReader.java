@@ -1,4 +1,4 @@
-package com.keylane;
+package com.keylane.reader;
 
 import java.io.FileReader;
 import java.io.Reader;
@@ -9,6 +9,8 @@ import java.util.List;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+
+import com.keylane.model.SLARecord;
 
 public class CSVReader implements ConvertToSLARecord {
     enum Headers {
