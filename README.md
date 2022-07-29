@@ -1,6 +1,6 @@
 [![CI/CD](https://github.com/wverveer/SLA-report/actions/workflows/gradle.yml/badge.svg)](https://github.com/wverveer/SLA-report/actions/workflows/gradle.yml)
 [![Coverage](.github/badges/jacoco.svg)](.github/badges/jacoco.svg)
-[![GitHub Issues Open](https://github-basic-badges.herokuapp.com/issues/wverveer/SLA-report.svg)](https://github.com/wverveer/SLA-report/issues)
+[![CodeKata Ranking](https://github-basic-badges.herokuapp.com/issues/wverveer/SLA-report.svg)](https://github.com/wverveer/SLA-report/issues)
 
 # SLA-report
 Application: SLA report
