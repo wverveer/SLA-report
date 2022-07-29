@@ -1,4 +1,4 @@
-name: Run Gradle on Push, PRs
+name: Build
 on:
   push:
     branches: [ '**' ]
