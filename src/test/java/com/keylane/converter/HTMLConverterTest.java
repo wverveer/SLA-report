@@ -1,11 +1,11 @@
 package com.keylane.converter;
 
-import com.keylane.model.SLARecord;
-import com.keylane.converter.HTMLConverter;
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+import com.keylane.model.SLARecord;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

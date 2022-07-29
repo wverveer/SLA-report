@@ -1,15 +1,16 @@
 package com.keylane.reader;
 
-import com.keylane.model.SLARecord;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-
 import java.io.FileReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+
+import com.keylane.model.SLARecord;
 
 public class JSONReader implements ConvertToSLARecord {
 

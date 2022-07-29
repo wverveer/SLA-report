@@ -1,14 +1,15 @@
 package com.keylane.reader;
 
-import com.keylane.model.SLARecord;
-import com.keylane.reader.XMLReader;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Objects;
+
+import org.junit.jupiter.api.Test;
+
+import com.keylane.model.SLARecord;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class XMLReaderTest {
 

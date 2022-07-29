@@ -1,11 +1,11 @@
 package com.keylane.converter;
 
-import com.keylane.model.SLARecord;
-
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import com.keylane.model.SLARecord;
 
 public class CSVConverter implements ConvertFromSLARecord {
     static class ServiceRecord {

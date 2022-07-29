@@ -1,23 +1,25 @@
 package com.keylane.reader;
 
-import com.keylane.model.SLARecord;
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
-
-import javax.xml.XMLConstants;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.xml.XMLConstants;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+
+import com.keylane.model.SLARecord;
+
 public class XMLReader implements ConvertToSLARecord {
-    public List<SLARecord> convert(String inputFilePath) throws Exception{
+    public List<SLARecord> convert(String inputFilePath) throws Exception {
         // Instantiate the Factory.
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
-        List<SLARecord> input = new ArrayList<SLARecord>();
+        List<SLARecord> input = new ArrayList<>();
 
         // Process XML securely, avoid attacks like XML External Entities (XXE).
         dbf.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);

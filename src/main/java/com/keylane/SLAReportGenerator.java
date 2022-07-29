@@ -1,11 +1,11 @@
 package com.keylane;
 
+import java.util.Objects;
+
+import com.keylane.converter.ConvertFromSLARecord;
 import com.keylane.fileWriter.FileWriter;
 import com.keylane.fileWriter.FileWriterImpl;
 import com.keylane.reader.ConvertToSLARecord;
-import com.keylane.converter.ConvertFromSLARecord;
-
-import java.util.Objects;
 
 /**
  * Steps of the procedure:

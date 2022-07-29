@@ -5,11 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Objects;
 
-import com.keylane.model.SLARecord;
-import com.keylane.reader.CSVReader;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import com.keylane.model.SLARecord;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class CSVReaderTest {
     @Test

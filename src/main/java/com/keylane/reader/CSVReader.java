@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.keylane.model.SLARecord;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+
+import com.keylane.model.SLARecord;
 
 public class CSVReader implements ConvertToSLARecord {
     enum Headers {
