@@ -1,5 +1,7 @@
-package com.keylane;
+package com.keylane.converter;
 
+import com.keylane.model.SLARecord;
+import com.keylane.converter.HTMLConverter;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class ConvertToHTMLTest {
+class HTMLConverterTest {
 
     @Test
     void convert() {
@@ -24,7 +26,7 @@ class ConvertToHTMLTest {
         list.add(new SLARecord(null, "TestService2", 100));
 
         // When.
-        ConvertToHTML convert = new ConvertToHTML();
+        HTMLConverter convert = new HTMLConverter();
         List<String> result = convert.convert(list);
 
         // Then.

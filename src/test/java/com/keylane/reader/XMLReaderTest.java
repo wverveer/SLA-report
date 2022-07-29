@@ -1,19 +1,21 @@
-package com.keylane;
+package com.keylane.reader;
 
+import com.keylane.model.SLARecord;
+import com.keylane.reader.XMLReader;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Objects;
 
-import org.junit.jupiter.api.Test;
+class XMLReaderTest {
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CSVReaderTest {
     @Test
     void convert() throws Exception {
-        CSVReader reader = new CSVReader();
-        String inputFilePath = Objects.requireNonNull(getClass().getClassLoader().getResource("input.csv")).getPath();
+        XMLReader reader = new XMLReader();
+        String inputFilePath = Objects.requireNonNull(getClass().getClassLoader().getResource("input.xml")).getPath();
 
         List<SLARecord> actual = reader.convert(inputFilePath);
 

@@ -1,5 +1,7 @@
-package com.keylane;
+package com.keylane.converter;
 
+import com.keylane.model.SLARecord;
+import com.keylane.converter.CSVConverter;
 import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;

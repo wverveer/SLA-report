@@ -1,4 +1,6 @@
-package com.keylane;
+package com.keylane.reader;
+
+import com.keylane.model.SLARecord;
 
 import java.io.IOException;
 import java.util.List;

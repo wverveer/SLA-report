@@ -1,4 +1,4 @@
-package com.keylane;
+package com.keylane.model;
 
 import java.util.Date;
 

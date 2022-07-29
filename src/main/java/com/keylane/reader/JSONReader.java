@@ -1,5 +1,6 @@
-package com.keylane;
+package com.keylane.reader;
 
+import com.keylane.model.SLARecord;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

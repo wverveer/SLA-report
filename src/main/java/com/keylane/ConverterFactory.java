@@ -1,5 +1,13 @@
 package com.keylane;
 
+import com.keylane.reader.CSVReader;
+import com.keylane.reader.ConvertToSLARecord;
+import com.keylane.reader.JSONReader;
+import com.keylane.reader.XMLReader;
+import com.keylane.converter.CSVConverter;
+import com.keylane.converter.ConvertFromSLARecord;
+import com.keylane.converter.HTMLConverter;
+
 import java.util.Map;
 import java.util.function.Supplier;
 
@@ -12,7 +20,7 @@ public class ConverterFactory {
     );
     private final Map<String, Supplier<ConvertFromSLARecord>> converterMap = Map.of(
             "csv", CSVConverter::new,
-            "html", ConvertToHTML::new
+            "html", HTMLConverter::new
     );
 
     public Map<String, Supplier<ConvertToSLARecord>> getReaderMap() {

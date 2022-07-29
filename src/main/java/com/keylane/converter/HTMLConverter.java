@@ -1,8 +1,10 @@
-package com.keylane;
+package com.keylane.converter;
+
+import com.keylane.model.SLARecord;
 
 import java.util.*;
 
-public class ConvertToHTML implements ConvertFromSLARecord {
+public class HTMLConverter implements ConvertFromSLARecord {
 
     private static class Helper {
         int totalDuration = 0;

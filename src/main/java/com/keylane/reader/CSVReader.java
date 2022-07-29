@@ -1,4 +1,4 @@
-package com.keylane;
+package com.keylane.reader;
 
 import java.io.FileReader;
 import java.io.Reader;
@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.keylane.model.SLARecord;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 

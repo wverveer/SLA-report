@@ -1,5 +1,7 @@
-package com.keylane;
+package com.keylane.reader;
 
+import com.keylane.model.SLARecord;
+import com.keylane.reader.JSONReader;
 import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;

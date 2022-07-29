@@ -1,4 +1,6 @@
-package com.keylane;
+package com.keylane.converter;
+
+import com.keylane.model.SLARecord;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
